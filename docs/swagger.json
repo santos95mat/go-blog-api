@@ -1,0 +1,293 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "A Tag Service API in Go using Gin",
+        "title": "Tag Service API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/login": {
+            "post": {
+                "description": "Logar user",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login"
+                ],
+                "summary": "Logar user",
+                "parameters": [
+                    {
+                        "description": "Logar user",
+                        "name": "user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.UserAuthDto"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/post": {
+            "get": {
+                "description": "Gett all posts from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "post"
+                ],
+                "summary": "Gett all posts",
+                "responses": {}
+            },
+            "post": {
+                "description": "Save post data in DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "post"
+                ],
+                "summary": "Create post",
+                "parameters": [
+                    {
+                        "description": "Create post",
+                        "name": "post",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PostDto"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/post/{id}": {
+            "get": {
+                "description": "Get a single post from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "post"
+                ],
+                "summary": "Get a single post by ID",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Find a post by id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            },
+            "put": {
+                "description": "Get a single post from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "post"
+                ],
+                "summary": "Get a single post by ID",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Find a post by id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Update the find post",
+                        "name": "post",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PostDto"
+                        }
+                    }
+                ],
+                "responses": {}
+            },
+            "delete": {
+                "description": "Delete a single post from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "post"
+                ],
+                "summary": "Delete a single post by ID",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Find a post by id and delete it",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/user": {
+            "get": {
+                "description": "Gett all users from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "user"
+                ],
+                "summary": "Gett all users",
+                "responses": {}
+            },
+            "post": {
+                "description": "Save user data in DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "user"
+                ],
+                "summary": "Create user",
+                "parameters": [
+                    {
+                        "description": "Create user",
+                        "name": "user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.UserDto"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/user/{id}": {
+            "get": {
+                "description": "Get a single user from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "user"
+                ],
+                "summary": "Get a single user by ID",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Find a user by id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            },
+            "put": {
+                "description": "Get a single user from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "user"
+                ],
+                "summary": "Get a single user by ID",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Find a user by id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Update the find user",
+                        "name": "user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.UserDto"
+                        }
+                    }
+                ],
+                "responses": {}
+            },
+            "delete": {
+                "description": "Delete a single user from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "user"
+                ],
+                "summary": "Delete a single user by ID",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Find a user by id and delete it",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    },
+    "definitions": {
+        "models.PostDto": {
+            "type": "object",
+            "properties": {
+                "body": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.UserAuthDto": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.UserDto": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "nickname": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,199 @@
+basePath: /
+definitions:
+  models.PostDto:
+    properties:
+      body:
+        type: string
+      title:
+        type: string
+    type: object
+  models.UserAuthDto:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  models.UserDto:
+    properties:
+      email:
+        type: string
+      last_name:
+        type: string
+      name:
+        type: string
+      nickname:
+        type: string
+      password:
+        type: string
+    type: object
+host: localhost:3000
+info:
+  contact: {}
+  description: A Tag Service API in Go using Gin
+  title: Tag Service API
+  version: "1.0"
+paths:
+  /login:
+    post:
+      description: Logar user
+      parameters:
+      - description: Logar user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserAuthDto'
+      produces:
+      - application/json
+      responses: {}
+      summary: Logar user
+      tags:
+      - login
+  /post:
+    get:
+      description: Gett all posts from DB
+      produces:
+      - application/json
+      responses: {}
+      summary: Gett all posts
+      tags:
+      - post
+    post:
+      description: Save post data in DB
+      parameters:
+      - description: Create post
+        in: body
+        name: post
+        required: true
+        schema:
+          $ref: '#/definitions/models.PostDto'
+      produces:
+      - application/json
+      responses: {}
+      summary: Create post
+      tags:
+      - post
+  /post/{id}:
+    delete:
+      description: Delete a single post from DB
+      parameters:
+      - description: Find a post by id and delete it
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Delete a single post by ID
+      tags:
+      - post
+    get:
+      description: Get a single post from DB
+      parameters:
+      - description: Find a post by id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Get a single post by ID
+      tags:
+      - post
+    put:
+      description: Get a single post from DB
+      parameters:
+      - description: Find a post by id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Update the find post
+        in: body
+        name: post
+        required: true
+        schema:
+          $ref: '#/definitions/models.PostDto'
+      produces:
+      - application/json
+      responses: {}
+      summary: Get a single post by ID
+      tags:
+      - post
+  /user:
+    get:
+      description: Gett all users from DB
+      produces:
+      - application/json
+      responses: {}
+      summary: Gett all users
+      tags:
+      - user
+    post:
+      description: Save user data in DB
+      parameters:
+      - description: Create user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserDto'
+      produces:
+      - application/json
+      responses: {}
+      summary: Create user
+      tags:
+      - user
+  /user/{id}:
+    delete:
+      description: Delete a single user from DB
+      parameters:
+      - description: Find a user by id and delete it
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Delete a single user by ID
+      tags:
+      - user
+    get:
+      description: Get a single user from DB
+      parameters:
+      - description: Find a user by id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Get a single user by ID
+      tags:
+      - user
+    put:
+      description: Get a single user from DB
+      parameters:
+      - description: Find a user by id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Update the find user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserDto'
+      produces:
+      - application/json
+      responses: {}
+      summary: Get a single user by ID
+      tags:
+      - user
+swagger: "2.0"
