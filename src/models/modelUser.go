@@ -11,8 +11,8 @@ type User struct {
 	LastName string    `json:"last_name" gorm:"not null" db:"last_name"`
 	Email    string    `json:"email" gorm:"not null;unique_index"`
 	Password string    `json:"-" gorm:"not null"`
-	Nickname string    `json:"nickname" gorm:"not null;unique_index;constraint:OnUpdate:CASCADE,OnDelete:CASCADE;"`
-	Posts    []Post    `json:"posts" gorm:"foreignKey:UserID"`
+	Nickname string    `json:"nickname" gorm:"not null;unique_index;"`
+	Posts    []Post    `json:"posts" gorm:"foreignKey:UserID;constraint:OnUpdate:CASCADE,OnDelete:CASCADE;"`
 	gorm.Model
 }
 

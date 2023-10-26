@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/santos95mat/go-api/src/initializers"
-	"github.com/santos95mat/go-api/src/models"
+	"github.com/santos95mat/go-blog-api/src/initializers"
+	"github.com/santos95mat/go-blog-api/src/models"
 )
 
 func init() {

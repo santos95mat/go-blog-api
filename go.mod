@@ -1,4 +1,4 @@
-module github.com/santos95mat/go-api
+module github.com/santos95mat/go-blog-api
 
 go 1.21.0
 

@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/santos95mat/go-api/src/controllers/postController"
-	"github.com/santos95mat/go-api/src/middlewares"
+	"github.com/santos95mat/go-blog-api/src/controllers/postController"
+	"github.com/santos95mat/go-blog-api/src/middlewares"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/santos95mat/go-api/src/controllers/authController"
+	"github.com/santos95mat/go-blog-api/src/controllers/authController"
 
 	"github.com/gin-gonic/gin"
 )

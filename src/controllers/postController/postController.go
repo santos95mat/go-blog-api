@@ -3,9 +3,9 @@ package postController
 import (
 	"net/http"
 
-	_ "github.com/santos95mat/go-api/docs"
-	"github.com/santos95mat/go-api/src/models"
-	"github.com/santos95mat/go-api/src/service/postService"
+	_ "github.com/santos95mat/go-blog-api/docs"
+	"github.com/santos95mat/go-blog-api/src/models"
+	"github.com/santos95mat/go-blog-api/src/service/postService"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

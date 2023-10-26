@@ -3,9 +3,9 @@ package authController
 import (
 	"net/http"
 
-	_ "github.com/santos95mat/go-api/docs"
-	"github.com/santos95mat/go-api/src/models"
-	"github.com/santos95mat/go-api/src/service/authService"
+	_ "github.com/santos95mat/go-blog-api/docs"
+	"github.com/santos95mat/go-blog-api/src/models"
+	"github.com/santos95mat/go-blog-api/src/service/authService"
 
 	"github.com/gin-gonic/gin"
 )

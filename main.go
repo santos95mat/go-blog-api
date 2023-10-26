@@ -1,9 +1,9 @@
 package main
 
 import (
-	_ "github.com/santos95mat/go-api/docs"
-	"github.com/santos95mat/go-api/src/initializers"
-	"github.com/santos95mat/go-api/src/routes"
+	_ "github.com/santos95mat/go-blog-api/docs"
+	"github.com/santos95mat/go-blog-api/src/initializers"
+	"github.com/santos95mat/go-blog-api/src/routes"
 )
 
 func init() {

@@ -1,9 +1,9 @@
 package postService
 
 import (
-	"github.com/santos95mat/go-api/src/entity"
-	"github.com/santos95mat/go-api/src/initializers"
-	"github.com/santos95mat/go-api/src/models"
+	"github.com/santos95mat/go-blog-api/src/entity"
+	"github.com/santos95mat/go-blog-api/src/initializers"
+	"github.com/santos95mat/go-blog-api/src/models"
 
 	"github.com/google/uuid"
 )

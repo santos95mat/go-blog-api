@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/santos95mat/go-api/src/cors"
+	"github.com/santos95mat/go-blog-api/src/cors"
 
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
