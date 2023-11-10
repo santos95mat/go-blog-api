@@ -1,6 +1,11 @@
 # GO API <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" height="48px" />
 
-#### API desenvolvida em GO para fins de aprendizagem usando GORM para conexão com banco de dados e GIN para criação do servidor.
+#### API desenvolvida em GO para fins de aprendizagem usando GORM para conexão com banco de dados e GIN para criação da API.
+
+## Entidades
+### User
+### Post
+#### Relacionamento: one-to-many (um usuário pode ter varios posts)
 
 ## Installation
 
